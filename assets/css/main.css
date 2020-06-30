@@ -1,6 +1,16 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
+:root {
+	--white: #ffffff;
+	--background-color: #114b5f;
+	--gradient-one: #119da4;
+	--gradient-two: #114b5f;
+	--body-text: rgba(255, 255, 255, 0.65);
+	--focus-color: #8cc9f0;
+	--line-gradient-one: #ff695e;
+	--line-gradient--two: #ffd07b;
+}
 /*
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -99,11 +109,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: var(--background-color);
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, var(--gradient-one) 15%, var(--gradient-two) 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, var(--gradient-one) 15%, var(--gradient-two) 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, var(--gradient-one) 15%, var(--gradient-two) 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, var(--gradient-one) 15%, var(--gradient-two) 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -120,8 +130,8 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
-		color: rgba(255, 255, 255, 0.65);
+		background-color: var(--background-color);
+		color: var(--body-text);
 	}
 
 	body, input, select, textarea {
@@ -303,19 +313,19 @@ input, select, textarea {
 	}
 
 	input, select, textarea {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	a:hover {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	strong, b {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	blockquote {
@@ -1925,7 +1935,7 @@ input, select, textarea {
 	.button {
 		background-color: transparent;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff !important;
+		color: var(--white) !important;
 	}
 
 		input[type="submit"]:hover,
@@ -1957,8 +1967,8 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cc9f0;
-			color: #ffffff !important;
+			background-color: var(--focus-color);
+			color: var(--white) !important;
 			box-shadow: none;
 		}
 
@@ -1983,7 +1993,7 @@ input, select, textarea {
 			input[type="button"].primary.icon:before,
 			button.primary.icon:before,
 			.button.primary.icon:before {
-				color: #ffffff !important;
+				color: var(--white) !important;
 			}
 
 /* Form */
@@ -2140,7 +2150,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	input[type="text"],
@@ -2157,8 +2167,8 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #8cc9f0;
-			box-shadow: 0 0 0 1px #8cc9f0;
+			border-color: var(--focus-color);
+			box-shadow: 0 0 0 1px var(--focus-color);
 		}
 
 	select {
@@ -2166,13 +2176,13 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #ffffff;
-			background: #935d8c;
+			color: var(--white);
+			background: var(--background-color);
 		}
 
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {
-		color: rgba(255, 255, 255, 0.65);
+		color: var(--body-text);
 	}
 
 		input[type="checkbox"] + label:before,
@@ -2183,15 +2193,15 @@ input, select, textarea {
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #ffffff;
-		border-color: #ffffff;
-		color: #935d8c;
+		background-color: var(--white);
+		border-color: var(--white);
+		color: var(--background-color);
 	}
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
-		border-color: #8cc9f0;
-		box-shadow: 0 0 0 1px #8cc9f0;
+		border-color: var(--focus-color);
+		box-shadow: 0 0 0 1px var(--focus-color);
 	}
 
 	::-webkit-input-placeholder {
@@ -2291,7 +2301,7 @@ input, select, textarea {
 			}
 
 		.icon.style1 {
-			color: #efa8b0;
+			color: var(--line-gradient-one);
 		}
 
 		.icon.style2 {
@@ -2299,7 +2309,7 @@ input, select, textarea {
 		}
 
 		.icon.style3 {
-			color: #a89cc8;
+			color: var(--line-gradient--two);
 		}
 
 		.icon.style4 {
@@ -2307,7 +2317,7 @@ input, select, textarea {
 		}
 
 		.icon.style5 {
-			color: #8cc9f0;
+			color: var(--focus-color);
 		}
 
 		@media screen and (max-width: 1680px) {
@@ -2349,7 +2359,7 @@ input, select, textarea {
 
 	.icon.alt {
 		border-color: rgba(255, 255, 255, 0.35);
-		color: #ffffff;
+		color: var(--white);
 	}
 
 		.icon.alt:hover {
@@ -2488,7 +2498,7 @@ input, select, textarea {
 	}
 
 	dl dt {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 /* Actions */
@@ -2777,7 +2787,7 @@ input, select, textarea {
 		}
 
 	table th {
-		color: #ffffff;
+		color: var(--white);
 	}
 
 	table thead {
@@ -2879,12 +2889,12 @@ input, select, textarea {
 			-ms-flex: 1;
 			flex: 1;
 			padding: 1.5em;
-			color: #ffffff;
+			color: var(--white);
 			text-align: center;
 		}
 
 			.statistics li.style1 {
-				background-color: #efa8b0;
+				background-color: var(--line-gradient-one);
 			}
 
 			.statistics li.style2 {
@@ -2892,7 +2902,7 @@ input, select, textarea {
 			}
 
 			.statistics li.style3 {
-				background-color: #a89cc8;
+				background-color: var(--line-gradient--two);
 			}
 
 			.statistics li.style4 {
@@ -2900,7 +2910,7 @@ input, select, textarea {
 			}
 
 			.statistics li.style5 {
-				background-color: #8cc9f0;
+				background-color: var(--focus-color);
 			}
 
 			.statistics li strong, .statistics li b {
@@ -3215,7 +3225,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		-ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
-		background-color: #ffffff;
+		background-color: var(--white);
 		color: #636363;
 		position: absolute;
 		width: 64em;
@@ -3297,7 +3307,7 @@ input, select, textarea {
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-color: var(--white);
 						box-shadow: none;
 					}
 
@@ -3334,7 +3344,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: var(--white);
 		color: #636363;
 		border-radius: 0.25em;
 	}
@@ -3411,8 +3421,8 @@ input, select, textarea {
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
-				color: #ffffff !important;
+				background-color: var(--focus-color);
+				color: var(--white) !important;
 				box-shadow: none;
 			}
 
@@ -3437,7 +3447,7 @@ input, select, textarea {
 				#main input[type="button"].primary.icon:before,
 				#main button.primary.icon:before,
 				#main .button.primary.icon:before {
-					color: #ffffff !important;
+					color: var(--white) !important;
 				}
 
 		#main label {
@@ -3458,8 +3468,8 @@ input, select, textarea {
 			#main input[type="email"]:focus,
 			#main select:focus,
 			#main textarea:focus {
-				border-color: #8cc9f0;
-				box-shadow: 0 0 0 1px #8cc9f0;
+				border-color: var(--focus-color);
+				box-shadow: 0 0 0 1px var(--focus-color);
 			}
 
 		#main select {
@@ -3468,7 +3478,7 @@ input, select, textarea {
 
 			#main select option {
 				color: #636363;
-				background: #ffffff;
+				background: var(--white);
 			}
 
 		#main input[type="checkbox"] + label,
@@ -3486,13 +3496,13 @@ input, select, textarea {
 		#main input[type="radio"]:checked + label:before {
 			background-color: #636363;
 			border-color: #636363;
-			color: #ffffff;
+			color: var(--white);
 		}
 
 		#main input[type="checkbox"]:focus + label:before,
 		#main input[type="radio"]:focus + label:before {
-			border-color: #8cc9f0;
-			box-shadow: 0 0 0 1px #8cc9f0;
+			border-color: var(--focus-color);
+			box-shadow: 0 0 0 1px var(--focus-color);
 		}
 
 		#main ::-webkit-input-placeholder {
@@ -3546,10 +3556,10 @@ input, select, textarea {
 
 		#main header.major h2:after {
 			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: -moz-linear-gradient(90deg, var(--line-gradient-one), var(--line-gradient--two), var(--focus-color));
+			background-image: -webkit-linear-gradient(90deg, var(--line-gradient-one), var(--line-gradient--two), var(--focus-color));
+			background-image: -ms-linear-gradient(90deg, var(--line-gradient-one), var(--line-gradient--two), var(--focus-color));
+			background-image: linear-gradient(90deg, var(--line-gradient-one), var(--line-gradient--two), var(--focus-color));
 		}
 
 		#main table tbody tr {
